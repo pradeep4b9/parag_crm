@@ -25,7 +25,6 @@ class ScansController < ApplicationController
     @card_scan = CardScan.new
   end
 
-  # GET /card_scans/1/edit
   def edit
   end
 
