@@ -1,0 +1,80 @@
+<div class="main">
+  <div class="wide_cont custom-background" style="background:transparent;">
+    <div class="doc-main">
+      <div class="doc-content">
+        <div class="" style ="text-align: center;" ><h2>CLIENTS </h2>
+        <div class="rgt" style ="float:right ;" >
+         
+        </div>
+        
+        <table class="responstable">
+          <thead>
+            <tr>
+              
+              <td>
+                <b>
+                  NAME
+                </b>
+              </td>
+              <td>
+                <b>
+                  EMAIL
+                </b>
+              </td>
+              <td>
+                <b>
+                  CONTACT NUMBER
+                </b>
+              </td>
+              <td>
+                <b>
+                  ADDRESS
+                </b>
+              </td>
+              
+              <td>
+                <b>
+                  CREATED AT
+                </b>
+              </td>
+              
+            </tr>
+            <% @client.each do |client| %>
+              <tr>
+                <td>
+                  <%= client.name %>
+                </td>
+                <td>
+                  <%= client.email %>
+                </td>
+                <td>
+                  <%= client.contact_number %>
+                </td>
+
+                <td>
+                  <%= client.address %>
+                </td>
+                
+                <td>
+                  <%= client.created_at.to_datetime.strftime("%d/%m/%Y %I:%M:%S %p") %>
+                </td>
+                
+              </tr>
+            <% end %>  
+          </thead>
+        </table>
+        
+        
+       
+     
+    </div>
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <br/>
+    <br/>
+    <br/>
+  </div>
+</div>
+
+
