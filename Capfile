@@ -1,16 +1,13 @@
-# Load DSL and Setup Up Stages
+# Load DSL and set up stages
 require 'capistrano/setup'
-# Includes default deployment tasks
 require 'capistrano/deploy'
-
 require 'capistrano/rvm'
 require 'capistrano/bundler'
-require 'capistrano/rails/assets' # for asset handling add
-# require 'capistrano/rails/migrations' # for running migrations
-
+require 'capistrano/rails'
 require 'capistrano/puma'
-
-# Includes tasks from other gems included in your Gemfile
+require 'capistrano/sidekiq'
+Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
+# Include tasks from other gems included in your Gemfile
 #
 # For documentation on these, see for example:
 #
@@ -19,6 +16,7 @@ require 'capistrano/puma'
 #   https://github.com/capistrano/chruby
 #   https://github.com/capistrano/bundler
 #   https://github.com/capistrano/rails
+#   https://github.com/capistrano/passenger
 #
 # require 'capistrano/rvm'
 # require 'capistrano/rbenv'
@@ -26,6 +24,6 @@ require 'capistrano/puma'
 # require 'capistrano/bundler'
 # require 'capistrano/rails/assets'
 # require 'capistrano/rails/migrations'
+# require 'capistrano/passenger'
 
-# Loads custom tasks from `lib/capistrano/tasks' if you have any defined.
-Dir.glob('lib/capistrano/tasks/*.cap').each { |r| import r }
+# Load custom tasks from `lib/capistrano/tasks` if you have any defined

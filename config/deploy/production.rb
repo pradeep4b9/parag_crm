@@ -5,9 +5,9 @@ set :stage, :production
 # Supports bulk-adding hosts to roles, the primary
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
-role :app, %w{ubuntu@52.32.8.127}
-role :web, %w{ubuntu@52.32.8.127}
-role :db,  %w{ubuntu@52.32.8.127}
+role :app, %w{ubuntu@52.66.11.223}
+role :web, %w{ubuntu@52.66.11.223}
+role :db,  %w{ubuntu@52.66.11.223}
 
 # Extended Server Syntax
 # ======================
@@ -15,7 +15,7 @@ role :db,  %w{ubuntu@52.32.8.127}
 # definition into the server list. The second argument
 # something that quacks like a hash can be used to set
 # extended properties on the server.
-server '52.32.8.127', user: 'ubuntu', roles: %w{web app}, my_property: :my_value
+server '52.66.11.223', user: 'ubuntu', roles: %w{web app}, my_property: :my_value
 
 # you can set custom ssh options
 # it's possible to pass any option but you need to keep in mind that net/ssh understand limited list of options
@@ -23,8 +23,8 @@ server '52.32.8.127', user: 'ubuntu', roles: %w{web app}, my_property: :my_value
 # set it globally
  set :ssh_options, {
    # keys: %w(/home/rlisowski/.ssh/id_rsa),
-   # keys: %w(~/.ssh/server.pem),
-   keys: %w(/home/localhost/.ec2/server.pem),
+   # keys: %w(~/.ssh/skill_test.pem),
+   keys: %w(/home/localhost/.ec2/skill_test.pem),
    forward_agent: false,
    auth_methods: %w(publickey password)
  }
