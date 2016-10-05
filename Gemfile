@@ -11,6 +11,11 @@ gem 'sprockets-rails', :require => 'sprockets/rails/version'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
+
+gem 'prawn'
+gem 'prawn-table'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

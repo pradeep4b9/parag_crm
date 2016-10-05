@@ -6,7 +6,7 @@ class ProfileController < ApplicationController
   end
 
   def create
-	 @user = User.new
+	  @user = User.new
 	end  	
 
 end	

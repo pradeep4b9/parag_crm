@@ -5,6 +5,23 @@ ParagCrmNew::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'client#index'
 
+  resources :client do
+    collection do 
+      get 'print_view'
+      post 'print_view'
+    end
+  end 
+
+  # get "products/download_pdf" => "products#download_pdf", :as => 'download_pdf'
+
+
+  resources :products do
+    collection do
+      get 'download_pdf'
+    end
+  end    
+
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

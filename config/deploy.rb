@@ -13,6 +13,9 @@ set :pty,  false
 set :assets_roles, [:web, :app]
 set :rails_env, 'production'
 
+set :user, "ubuntu"
+set :domain, "52.32.8.127"
+
 
 
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
@@ -54,12 +57,7 @@ namespace :deploy do
     end
   end
 
-  task :add_default_hooks do
-    after 'deploy:starting', 'sidekiq:quiet'
-    after 'deploy:updated', 'sidekiq:stop'
-    after 'deploy:reverted', 'sidekiq:stop'
-    after 'deploy:published', 'sidekiq:start'
-  end
+ 
 
   after :finishing, 'deploy:cleanup'
 
