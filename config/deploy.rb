@@ -1,6 +1,4 @@
 # config valid only for current version of Capistrano
-lock '3.6.1'
-
 set :application, 'web_portal'
 set :repo_url, 'git@github.com:pradeep4b9/parag_crm.git'
 
