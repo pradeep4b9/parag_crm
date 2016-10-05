@@ -2,7 +2,9 @@
 lock '3.6.1'
 
 set :application, 'parag_crm_new'
-set :repo_url, 'git@github.com:pradeep4b9/parag_crm_new.git'
+set :repo_url, 'https://pradeep4b9:comakeit@123456@github.com/pradeep4b9/parag_crm_new.git'
+
+
 set :branch, "master"
 
 set :deploy_to, '/home/ubuntu/my_verified_store'
