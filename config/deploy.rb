@@ -3,7 +3,7 @@ set :application, 'parag_crm_new'
 set :repo_url, 'https://pradeep4b9:comakeit@123456@github.com/pradeep4b9/parag_crm_new.git'
 
 
-set :stage, :production
+set :default_stage, "production" 
 
 set :deploy_to, '/home/ubuntu/my_verified_store'
 ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }

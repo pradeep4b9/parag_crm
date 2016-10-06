@@ -1,5 +1,3 @@
-set :stage, :development
-
 # Simple Role Syntax
 # ==================
 # Supports bulk-adding hosts to roles, the primary
@@ -24,7 +22,7 @@ server '52.66.11.223', user: 'ubuntu', roles: %w{web app}, my_property: :my_valu
  set :ssh_options, {
    # keys: %w(/home/rlisowski/.ssh/id_rsa),
    # keys: %w(~/.ssh/skill_test.pem),
-   keys: %w(/home/localhost/ec2/skill_test.pem),
+   keys: %w(/home/pradeep/skill_test.pem),
    forward_agent: false,
    auth_methods: %w(publickey password)
  }

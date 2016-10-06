@@ -9,7 +9,8 @@ Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
 # Include tasks from other gems included in your Gemfile
 #
 # For documentation on these, see for example:
-#
+#Rake::Task[:production].invoke
+
 #   https://github.com/capistrano/rvm
 #   https://github.com/capistrano/rbenv
 #   https://github.com/capistrano/chruby
@@ -26,3 +27,4 @@ Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
 # require 'capistrano/passenger'
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
+Rake::Task[:production].invoke
