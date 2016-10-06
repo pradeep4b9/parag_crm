@@ -1,9 +1,8 @@
 # config valid only for current version of Capistrano
 set :application, 'parag_crm_new'
-set :repo_url, 'https://pradeep4b9:comakeit@123456@github.com/pradeep4b9/parag_crm_new.git'
-
-
-set :default_stage, "production" 
+set :repo_url, 'git@github.com:pradeep4b9/parag_crm_new.git'
+set :stage, :production
+# set :default_stage, "production" 
 
 set :deploy_to, '/home/ubuntu/my_verified_store'
 ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
@@ -15,7 +14,6 @@ set :format, :pretty
 set :log_level, :debug
 set :pty,  false
 set :assets_roles, [:web, :app]
-set :rails_env, 'production'
 
 
 set :ssh_options, {

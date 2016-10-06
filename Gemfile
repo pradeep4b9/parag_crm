@@ -5,6 +5,8 @@ gem 'mongoid', '~> 4.0.0'
 gem 'bson_ext'
 gem 'mongoid_token', github: 'apai4/mongoid_token'
 
+gem 'therubyracer', :platform=>:ruby
+
 gem 'puma'
 gem 'sqlite3'
 gem 'sprockets-rails', :require => 'sprockets/rails/version'
@@ -18,8 +20,7 @@ gem 'prawn'
 gem 'prawn-table'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-
+gem 'uglifier'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
@@ -28,7 +29,6 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails' # i'm not sure whether this is relevant
-gem 'bootstrap-table-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
