@@ -43,14 +43,14 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
-
+group :development do
   gem 'capistrano', require: false
   # cap tasks to manage puma application server
   gem 'capistrano3-puma', '~> 1.1.0', require: false
   gem 'capistrano-rails',   '~> 1.1', require: false
   gem 'capistrano-bundler', '~> 1.1', require: false
   gem 'capistrano-rvm',   '~> 0.1', require: false
-
+end 
 
   gem 'quiet_assets'
   gem 'rails_layout'
@@ -70,11 +70,11 @@ group :test do
   gem 'launchy'
   gem 'selenium-webdriver'
 end
-
+group :production do
   # gem 'unicorn'
   # gem 'unicorn-rails'
   # gem 'puma'
-
+end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
