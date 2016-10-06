@@ -1,6 +1,4 @@
 # config valid only for current version of Capistrano
-lock '3.6.1'
-
 set :application, 'parag_crm_new'
 set :repo_url, 'https://pradeep4b9:comakeit@123456@github.com/pradeep4b9/parag_crm_new.git'
 
@@ -15,7 +13,7 @@ set :domain, "52.66.11.223"
 
 set :deploy_via, :copy
 set :ssh_options, {
-#    keys: %w(/home/rlisowski/.ssh/id_rsa),
+#    keys: %w(/home/ec2/pradeep/skill_test.pem),
     forward_agent: true,
     auth_methods: ["publickey"],
     keys: ["/home/ec2/pradeep/skill_test.pem"]

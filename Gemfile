@@ -44,7 +44,6 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :development do
   gem 'capistrano', require: false
   # cap tasks to manage puma application server
   gem 'capistrano3-puma', '~> 1.1.0', require: false
@@ -56,8 +55,8 @@ group :development do
   gem 'quiet_assets'
   gem 'rails_layout'
   gem 'spring'
+  gem 'net-ssh', '~> 3.2'
 
-end
 
 group :development, :test do
   gem 'factory_girl_rails'
@@ -72,11 +71,9 @@ group :test do
   gem 'selenium-webdriver'
 end
 
-group :production do
   # gem 'unicorn'
   # gem 'unicorn-rails'
   # gem 'puma'
-end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
